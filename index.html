@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>blahArch repository</title>
+    <style>
+        :root {
+            --bg: #1a1b26;
+            --surface: #24283b;
+            --text: #c0caf5;
+            --accent: #7dcfff;
+            --border: #414868;
+        }
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: 'Fira Code', 'JetBrains Mono', monospace;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            background-color: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 40px;
+            max-width: 600px;
+            width: 100%;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+        h1 {
+            color: var(--accent);
+            margin-top: 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        p {
+            line-height: 1.6;
+            color: #9aa5ce;
+        }
+        .code-block {
+            background-color: #16161e;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 15px;
+            overflow-x: auto;
+            position: relative;
+        }
+        code {
+            color: #bb9af7;
+        }
+        a {
+            color: var(--accent);
+            text-decoration: none;
+            border-bottom: 1px dashed var(--accent);
+            transition: all 0.2s;
+        }
+        a:hover {
+            color: #fff;
+            border-bottom: 1px solid #fff;
+        }
+        .footer {
+            margin-top: 30px;
+            font-size: 0.9em;
+            text-align: center;
+            color: #565f89;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>🦈 blahArch repository</h1>
+        <p>the official package repository for the blahArch Linux distribution and the <strong>haj</strong> package manager.</p>
+        
+        <h3>installation</h3>
+        <p>to use this repository, append the following configuration to the bottom of your <code>/etc/pacman.conf</code> file:</p>
+        
+        <div class="code-block">
+<pre style="margin: 0;"><code>[blaharch]
+SigLevel = Optional TrustAll
+Server = https://asitos.github.io/blaharch-repo/$arch</code></pre>
+        </div>
+
+        <h3>usage</h3>
+        <p>once added, synchronize your databases to access the packages:</p>
+        <div class="code-block">
+<pre style="margin: 0;"><code>sudo pacman -Sy haj</code></pre>
+        </div>
+
+        <div class="footer">
+            hosted with 🩵 on <a href="https://github.com/asitos/blaharch-repo" target="_blank">github</a> | all hail blahaj.
+        </div>
+    </div>
+
+</body>
+</html>
